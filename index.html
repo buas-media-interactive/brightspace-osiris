@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Brightspace to Osiris Spreadsheet converter</title>
+        <link rel="stylesheet" href="lib/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Brightspace to Osiris Converter</h1>
+            <p>
+                <strong>Privacy statement:</strong>
+                <em>This page uses no cookies. We collect no data from you whatsoever. The data you upload never leaves your browser.</em>
+            </p>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>#1. Load an Excel Spreadsheet from Brightspace</h3>
+                    <input type="file" id="bspfile" accept=".xlsx">
+                    <hr>
+                    <h3>#2. Choose the grade column to export</h3>
+                    <select id="gradecolumn"></select>
+                    <div style="max-height: 400px; overflow-y: auto;">
+                        <table class="table table-bordered table-striped table-responsive">
+                            <thead>
+                                <th>Student ID</th>
+                                <th>Student name</th>
+                                <th>Decimal Grade</th>
+                                <th>Point Grade</th>
+                            </thead>
+                            <tbody id="gradelist">
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <hr>
+                </div>
+                <div class="col-md-6">
+                    <h3>#3. Load blank Osiris File to fill in headers</h3>
+                    <input type="file" id="osirisfile" accept=".xlsx">
+                    <hr>
+                    <h3>#4. Click below to generate Osiris file</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="lib/xlsx.mini.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
