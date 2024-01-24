@@ -7,17 +7,24 @@
     </head>
     <body>
         <div class="container">
-            <h1>Brightspace to Osiris Converter</h1>
-            <p>
-                <strong>Privacy statement:</strong>
-                <em>This page uses no cookies. We collect no data from you whatsoever. The data you upload never leaves your browser.</em>
-            </p>
+            <div class="alert alert-info text-center mt-2 p-1">
+                <h1>Brightspace to Osiris Converter</h1>
+                <p>
+                    <a href="https://github.com/buas-media-interactive/brightspace-osiris" target="_blank" class="text-success">
+                        Check our detailed instructions for using the Brightspace to Osiris converter tool on GitHub
+                    </a>
+                </p>
+                <p>
+                    <strong>Privacy statement:</strong>
+                    <em>This page uses no cookies. We collect no data from you whatsoever. The data you upload never leaves your browser.</em>
+                </p>
+            </div>
             <div class="row">
                 <div class="col-md-6">
                     <h3>#1. Load grades from Brightspace</h3>
                     <p>You need to use an Excel file generated from Brightspace</p>
                     <input type="file" id="bspfile" accept=".xlsx">
-                    <hr>
+                    <hr class="mx-4 my-2 border border-primary">
                     <h3>#2. Choose the grade column to export</h3>
                     <select id="gradecolumn"></select>
                     <h5>
@@ -38,7 +45,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <hr>
+                    <hr class="mx-4 my-2 border border-primary">
                 </div>
                 <div class="col-md-6">
                     <h3>#3. Load course details from Osiris</h3>
@@ -56,11 +63,11 @@
                         <strong id="osiriscount">0</strong>
                         students
                     </h5>
-                    <hr>
+                    <hr class="mx-4 my-2 border border-primary">
                     <h3>#4. Generate final Osiris file</h3>
-                    <p id="contentdescription"></p>
+                    <h5 id="contentdescription"></h5>
                     <button id="exportbutton" class="btn btn-lg btn-success w-100">Export Osiris File</button>
-                    </div>
+                    <hr class="mx-4 my-2 border border-primary">
                 </div>
             </div>
         </div>
