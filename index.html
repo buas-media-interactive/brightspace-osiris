@@ -14,11 +14,17 @@
             </p>
             <div class="row">
                 <div class="col-md-6">
-                    <h3>#1. Load an Excel Spreadsheet from Brightspace</h3>
+                    <h3>#1. Load grades from Brightspace</h3>
+                    <p>You need to use an Excel file generated from Brightspace</p>
                     <input type="file" id="bspfile" accept=".xlsx">
                     <hr>
                     <h3>#2. Choose the grade column to export</h3>
                     <select id="gradecolumn"></select>
+                    <h5>
+                        <strong id="bspcount">0</strong>
+                        students have a grade for
+                        <strong id="bspcolname">(no grade selected)</strong>
+                    </h5>
                     <div style="max-height: 400px; overflow-y: auto;">
                         <table class="table table-bordered table-striped table-responsive">
                             <thead>
@@ -35,10 +41,25 @@
                     <hr>
                 </div>
                 <div class="col-md-6">
-                    <h3>#3. Load blank Osiris File to fill in headers</h3>
+                    <h3>#3. Load course details from Osiris</h3>
                     <input type="file" id="osirisfile" accept=".xlsx">
+                    <p>
+                        <strong>TIP:</strong>
+                        <em>If you skip this part, you can still export a Spreadsheet and paste its content in an Osiris spreadsheet</em>
+                    </p>
+                    <h5>Osiris headers:</h5>
+                    <table class="table table-bordered table-sm small">
+                        <tbody id="osirisheaders"></tbody>
+                    </table>
+                    <h5>
+                        Original Osiris file contains
+                        <strong id="osiriscount">0</strong>
+                        students
+                    </h5>
                     <hr>
-                    <h3>#4. Click below to generate Osiris file</h3>
+                    <h3>#4. Generate final Osiris file</h3>
+                    <p id="contentdescription"></p>
+                    <button id="exportbutton" class="btn btn-lg btn-success w-100">Export Osiris File</button>
                     </div>
                 </div>
             </div>
