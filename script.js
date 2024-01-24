@@ -56,7 +56,11 @@ function generateSpreadsheet() {
     let workbook = XLSX.utils.book_new();
     let worksheet = XLSX.utils.aoa_to_sheet(final_table);
     XLSX.utils.book_append_sheet(workbook, worksheet, "Test list");
-    XLSX.writeFile(workbook, `Generated-Osiris-${osiris_content[0][1]}-${now_date}.xlsx`,{ compression: true });
+    XLSX.writeFile(
+        workbook,
+        `Generated-Osiris-${osiris_content[0][1]}-${now_date}.xlsx`,
+        { compression: true, ignoreEC: false, bookSST: true }
+    );
 }
 
 function displayOsiris() {
