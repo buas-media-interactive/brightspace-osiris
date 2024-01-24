@@ -50,19 +50,17 @@
                 <div class="col-md-6">
                     <h3>#3. Load course details from Osiris</h3>
                     <input type="file" id="osirisfile" accept=".xlsx">
-                    <p>
-                        <strong>TIP:</strong>
-                        <em>If you skip this part, you can still export a spreadsheet by clicking on the button at the bottom and paste its content into an existing Osiris spreadsheet</em>
-                    </p>
-                    <h5>Osiris headers:</h5>
-                    <table class="table table-bordered table-sm small">
-                        <tbody id="osirisheaders"></tbody>
-                    </table>
-                    <h5>
-                        Original Osiris file contains
-                        <strong id="osiriscount">0</strong>
-                        students
-                    </h5>
+                    <div id="osirisdata" style="display: none;">
+                        <h5>Osiris headers:</h5>
+                        <table class="table table-bordered table-sm small">
+                            <tbody id="osirisheaders"></tbody>
+                        </table>
+                        <h5>
+                            Original Osiris file contains
+                            <strong id="osiriscount">0</strong>
+                            students
+                        </h5>
+                    </div>
                     <hr class="mx-4 my-2 border border-primary">
                     <h3>#4. Generate final Osiris file</h3>
                     <h5 id="contentdescription"></h5>
