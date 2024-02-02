@@ -86,7 +86,10 @@ function selectGrades() {
             return [
                 (studentidrx.exec(g[0])||["Invalid Student ID"])[0],
                 name_columns.map(n => g[n]).join(', '),
-                Math.round(100*g[column]/denominator)/10,
+                Math.floor(
+                    Math.round(1e4*g[column]/denominator)/100
+                )/10,
+                /* Working around JS' floating point behaviour where a 9.2 would otherwise be rounded down to a 9.1 ! */
                 `${g[column]}/${denominator}`
             ]
         });
